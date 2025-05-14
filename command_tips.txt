@@ -1,0 +1,22 @@
+export STORE_DIRECTORY=/home/ubuntu/data2/binance
+
+# um kline, from earliest, usdt only
+time python /home/ubuntu/project/binance-public-data/python/download-kline.py -i 4h -t um -skip-daily 1 -startDate 2020-01-01 -usdt-only 1
+time python /home/ubuntu/project/binance-public-data/python/download-kline.py -i 4h -t um -skip-monthly 1 -startDate 2022-02-25 -endDate 2022-03-02 -usdt-only 1
+time python /home/ubuntu/project/binance-public-data/python/download-kline.py -i 4h -t um -skip-monthly 1 -startDate 2022-03-30 -endDate 2022-04-04 -usdt-only 1
+
+# funding rate, from earliest, usdt only
+time python /home/ubuntu/project/binance-public-data/python/download-fundingRate_private.py -t um -skip-daily 1 -startDate 2020-01-01 -usdt-only 1
+
+# premium Index, from earliest, usdt only
+time python /home/ubuntu/project/binance-public-data/python/download-futures-premiumIndexKlines.py -t um -i 4h -skip-daily 1 -startDate 2020-01-01 -usdt-only 1
+time python /home/ubuntu/project/binance-public-data/python/download-futures-premiumIndexKlines.py -i 4h -t um -skip-monthly 1 -startDate 2022-02-25 -endDate 2022-03-02 -usdt-only 1
+time python /home/ubuntu/project/binance-public-data/python/download-futures-premiumIndexKlines.py -i 4h -t um -skip-monthly 1 -startDate 2022-03-30 -endDate 2022-04-04 -usdt-only 1
+
+# metrics, from earliest, usdt only
+time python /home/ubuntu/project/binance-public-data/python/download-metrics_private.py -t um -skip-monthly 1 -startDate 2021-12-01 -usdt-only 1
+
+# spot kline, from earliest, usdt only
+time python /home/ubuntu/project/binance-public-data/python/download-kline.py -i 4h -t spot -skip-daily 1 -startDate 2017-08-01 -usdt-only 1
+time python /home/ubuntu/project/binance-public-data/python/download-kline.py -i 4h -t spot -skip-monthly 1 -startDate 2022-02-25 -endDate 2022-03-02 -usdt-only 1
+time python /home/ubuntu/project/binance-public-data/python/download-kline.py -i 4h -t spot -skip-monthly 1 -startDate 2022-03-30 -endDate 2022-04-04 -usdt-only 1

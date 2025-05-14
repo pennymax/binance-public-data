@@ -147,6 +147,9 @@ def get_parser(parser_type):
   parser.add_argument(
       '-t', dest='type', required=True, choices=TRADING_TYPE,
       help='Valid trading types: {}'.format(TRADING_TYPE))
+  parser.add_argument(
+      '-usdt-only', dest='usdt_only', default=1, type=int, choices=[0, 1],
+      help='1 to download only USDT data, default 1')
 
   if parser_type == 'klines':
     parser.add_argument(

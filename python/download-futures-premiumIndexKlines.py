@@ -9,6 +9,7 @@
 """
 import sys
 from datetime import *
+from time import sleep
 
 import pandas as pd
 
@@ -111,6 +112,15 @@ if __name__ == "__main__":
     else:
         symbols = args.symbols
         num_symbols = len(symbols)
+    
+    if args.usdt_only == 1:
+      symbols = sorted([symbol for symbol in symbols if symbol.endswith('USDT')])
+      num_symbols = len(symbols)
+      print(f'Downloading {num_symbols} only USDT symbols.')
+    else:
+      symbols = sorted(symbols)
+      print(f'Downloading {num_symbols} symbols.')
+    sleep(5)
 
     if args.dates:
         dates = args.dates
