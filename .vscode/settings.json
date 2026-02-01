@@ -1,0 +1,8 @@
+{
+    "python.analysis.exclude": [
+        "/home/pennymax/proj/binance-public-data/"
+    ],
+    "cursorpyright.analysis.exclude": [
+        "/home/pennymax/proj/binance-public-data/"
+    ]
+}
